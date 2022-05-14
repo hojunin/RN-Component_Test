@@ -16,7 +16,7 @@ const TabNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => {
-            return <HomeIcon color={color} width={24} height={24} />;
+            return <HomeIcon color={color} width={24} height={20} />;
           },
         }}
       />
@@ -26,7 +26,7 @@ const TabNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => {
-            return <SearchIcon color={color} width={24} height={24} />;
+            return <SearchIcon color={color} width={20} height={20} />;
           },
         }}
       />

@@ -1,11 +1,14 @@
-import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import {View, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
 import Lottie from '../../Components/Lottie';
 
 const HomeLanding = () => {
+  const [rerender, setRerender] = useState(false);
   return (
     <View style={styles.container}>
-      <Lottie />
+      <TouchableOpacity onPress={() => setRerender(!rerender)}>
+        <Lottie flag={rerender} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -17,4 +20,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
+  button: {},
 });
