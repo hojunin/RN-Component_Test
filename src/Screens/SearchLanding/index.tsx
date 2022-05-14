@@ -14,6 +14,11 @@ const SearchLanding = ({navigation}) => {
         label="제스쳐 핸들링"
         onPress={() => navigation.navigate('GestureHandler')}
       />
+      <View style={styles.divider} />
+      <Button
+        label="보간 사용법"
+        onPress={() => navigation.navigate('Interpolate')}
+      />
     </View>
   );
 };

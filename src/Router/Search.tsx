@@ -28,7 +28,7 @@ const SearchNavigator = () => {
       <SearchStack.Screen
         name="Interpolate"
         component={Interpolate}
-        options={{headerTitle: '보간'}}
+        options={{headerTitle: '보간 사용법'}}
       />
     </SearchStack.Navigator>
   );
