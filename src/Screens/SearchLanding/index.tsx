@@ -20,7 +20,27 @@ const SearchLanding = ({navigation}) => {
         label="보간 사용법"
         onPress={() => navigation.navigate('Interpolate')}
       />
-      <SnackBar />
+      <View style={styles.divider} />
+      <Button
+        label="색깔 변환하기"
+        onPress={() => navigation.navigate('InterpolateColor')}
+      />
+      <View style={styles.divider} />
+      <Button
+        label="핀치 핸들링"
+        onPress={() => navigation.navigate('PinchGestureHandler')}
+      />
+      <View style={styles.divider} />
+      <Button
+        label="싱글탭, 더블탭"
+        onPress={() => navigation.navigate('TabHandler')}
+      />
+      <View style={styles.divider} />
+      <Button
+        label="레이아웃 애니메이션"
+        onPress={() => navigation.navigate('LayoutAnimation')}
+      />
+      {/* <SnackBar /> */}
     </View>
   );
 };

@@ -4,6 +4,10 @@ import Search from '../Screens/SearchLanding';
 import Spring from '../Screens/Spring/Spring';
 import GestureHandler from '../Screens/GestureHandler';
 import Interpolate from '../Screens/Interpolate';
+import InterpolateColor from '../Screens/InterpolateColor';
+import PinchGestureHandlerScreen from '../Screens/PinchGestureHandlerScreen';
+import TabHandler from '../Screens/TabHandler';
+import LayoutAnimation from '../Screens/LayoutAnimation';
 
 const SearchStack = createStackNavigator();
 
@@ -29,6 +33,26 @@ const SearchNavigator = () => {
         name="Interpolate"
         component={Interpolate}
         options={{headerTitle: '보간 사용법'}}
+      />
+      <SearchStack.Screen
+        name="InterpolateColor"
+        component={InterpolateColor}
+        options={{headerTitle: '테마 변환'}}
+      />
+      <SearchStack.Screen
+        name="PinchGestureHandler"
+        component={PinchGestureHandlerScreen}
+        options={{headerTitle: '보간 사용법'}}
+      />
+      <SearchStack.Screen
+        name="TabHandler"
+        component={TabHandler}
+        options={{headerTitle: '보간 사용법'}}
+      />
+      <SearchStack.Screen
+        name="LayoutAnimation"
+        component={LayoutAnimation}
+        options={{headerTitle: '레이아웃 애니메이션'}}
       />
     </SearchStack.Navigator>
   );
