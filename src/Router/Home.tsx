@@ -10,7 +10,7 @@ const HomeNavigator = () => {
       <HomeStack.Screen
         name="Landing"
         component={Home}
-        options={{headerTitle: '홈'}}
+        options={{headerTitle: '로티 활용 사례'}}
       />
     </HomeStack.Navigator>
   );

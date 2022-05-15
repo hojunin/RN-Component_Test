@@ -13,7 +13,7 @@ const SearchNavigator = () => {
       <SearchStack.Screen
         name="SearchLanding"
         component={Search}
-        options={{headerTitle: '검색'}}
+        options={{headerTitle: '애니메이션 튜토리얼'}}
       />
       <SearchStack.Screen
         name="Spring"

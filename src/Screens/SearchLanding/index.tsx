@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Button from '../../Components/Button';
+import SnackBar from '../../Components/SnackBar';
 
 const SearchLanding = ({navigation}) => {
   return (
@@ -19,6 +20,7 @@ const SearchLanding = ({navigation}) => {
         label="보간 사용법"
         onPress={() => navigation.navigate('Interpolate')}
       />
+      <SnackBar />
     </View>
   );
 };

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import LottieView from 'lottie-react-native';
 // import Car from '../../Assets/car.json';
-import {Animated, Dimensions, Easing} from 'react-native';
+import {Animated} from 'react-native';
 
 const Lottie = ({flag}: {flag: boolean}) => {
   const progress = useRef(new Animated.Value(0)).current;
@@ -10,8 +10,7 @@ const Lottie = ({flag}: {flag: boolean}) => {
     Animated.timing(progress, {
       useNativeDriver: true,
       toValue: 0.5,
-      duration: 1000,
-      easing: Easing.linear,
+      duration: 500,
     }).start();
   };
 
@@ -19,8 +18,7 @@ const Lottie = ({flag}: {flag: boolean}) => {
     Animated.timing(progress, {
       useNativeDriver: true,
       toValue: 0,
-      duration: 1000,
-      easing: Easing.linear,
+      duration: 500,
     }).start();
   };
 
