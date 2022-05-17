@@ -62,9 +62,9 @@ const TabHandler = () => {
               }}
               style={styles.image}>
               <AnimatedImage
-                source={require('../../Assets/heart.jpeg')}
+                source={require('../../Assets/cryptoCat.jpeg')}
                 style={[
-                  styles.image,
+                  styles.icon,
                   {
                     shadowOffset: {width: 0, height: 20},
                     shadowOpacity: 0.35,
@@ -99,6 +99,12 @@ const styles = StyleSheet.create({
   image: {
     width: SIZE,
     height: SIZE,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    width: SIZE / 2,
+    height: SIZE / 2,
   },
   turtles: {fontSize: 40, textAlign: 'center', marginTop: 30},
 });

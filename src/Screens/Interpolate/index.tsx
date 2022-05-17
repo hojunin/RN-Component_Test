@@ -6,7 +6,7 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
-const WORDS = ['나는', '재택근무를', '원한다', '아니면', '퇴근도 좋다'];
+const WORDS = ['🤓', '🦖', '😇', '🐰', '😵'];
 
 const Interpolate = () => {
   const translateX = useSharedValue(0);
