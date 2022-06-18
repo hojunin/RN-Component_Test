@@ -40,7 +40,9 @@ const SearchLanding = ({navigation}) => {
         label="레이아웃 애니메이션"
         onPress={() => navigation.navigate('LayoutAnimation')}
       />
-      <SnackBar />
+      <View style={styles.divider} />
+      <Button label="탭뷰" onPress={() => navigation.navigate('TabView')} />
+      {/* <SnackBar /> */}
     </View>
   );
 };

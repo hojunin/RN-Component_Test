@@ -8,6 +8,7 @@ import InterpolateColor from '../Screens/InterpolateColor';
 import PinchGestureHandlerScreen from '../Screens/PinchGestureHandlerScreen';
 import TabHandler from '../Screens/TabHandler';
 import LayoutAnimation from '../Screens/LayoutAnimation';
+import TabViewScreen from '../Screens/TabView';
 
 const SearchStack = createStackNavigator();
 
@@ -53,6 +54,11 @@ const SearchNavigator = () => {
         name="LayoutAnimation"
         component={LayoutAnimation}
         options={{headerTitle: '레이아웃 애니메이션'}}
+      />
+      <SearchStack.Screen
+        name="TabView"
+        component={TabViewScreen}
+        options={{headerTitle: '탭뷰'}}
       />
     </SearchStack.Navigator>
   );

@@ -6,7 +6,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Animated, {FadeIn, FadeOut, Layout} from 'react-native-reanimated';
+import Animated, {
+  Easing,
+  FadeIn,
+  FadeOut,
+  Keyframe,
+  Layout,
+} from 'react-native-reanimated';
 
 const LIST_ITEM_COLOR = '#1798DE';
 
@@ -16,6 +22,22 @@ interface Item {
 
 const LayoutAnimation = () => {
   const initialMode = useRef<boolean>(true);
+
+  const enteringAnimation = new Keyframe({
+    0: {
+      transform: [{scale: 1.1}],
+    },
+    30: {
+      transform: [{scale: 1}],
+    },
+    60: {
+      transform: [{scale: 1.2}],
+    },
+    100: {
+      transform: [{scale: 1}],
+      easing: Easing.quad,
+    },
+  }).duration(2000);
 
   useEffect(() => {
     initialMode.current = false;
@@ -51,9 +73,9 @@ const LayoutAnimation = () => {
             <Animated.View
               key={item.id}
               entering={
-                initialMode.current ? FadeIn.delay(100 * index) : FadeIn
+                initialMode.current ? FadeIn.delay(200 * index) : FadeIn
               }
-              exiting={FadeOut}
+              exiting={enteringAnimation}
               layout={Layout.delay(100)}
               onTouchEnd={() => onDelete(item.id)}
               style={styles.listItem}>
