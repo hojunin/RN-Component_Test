@@ -9,6 +9,7 @@ import PinchGestureHandlerScreen from '../Screens/PinchGestureHandlerScreen';
 import TabHandler from '../Screens/TabHandler';
 import LayoutAnimation from '../Screens/LayoutAnimation';
 import TabViewScreen from '../Screens/TabView';
+import CustomPager from '../Screens/TabView/CustomPager';
 
 const SearchStack = createStackNavigator();
 
@@ -57,7 +58,7 @@ const SearchNavigator = () => {
       />
       <SearchStack.Screen
         name="TabView"
-        component={TabViewScreen}
+        component={CustomPager}
         options={{headerTitle: '탭뷰'}}
       />
     </SearchStack.Navigator>

@@ -23,12 +23,15 @@ export function usePagerScrollHandler(handlers: any, dependencies?: any) {
 }
 
 export default () => {
-  const handler = usePagerScrollHandler({
-    onPageScroll: (e: any) => {
-      'worklet';
-      console.log(e.offset, e.position);
+  const handler = usePagerScrollHandler(
+    {
+      onPageScroll: (e: any) => {
+        'worklet';
+        console.log(e.offset, e.position);
+      },
     },
-  });
+    [],
+  );
 
   return (
     <AnimatedPager

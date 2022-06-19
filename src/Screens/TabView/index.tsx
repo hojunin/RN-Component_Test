@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import {PagerView} from 'react-native-pager-view';
+import {PagerView, LazyPagerView} from 'react-native-pager-view';
 import First from './First';
 import Second from './Second';
 import Third from './Third';
@@ -8,7 +8,10 @@ import Fourth from './Fourth';
 
 const TabViewScreen = () => {
   return (
-    <PagerView style={styles.pagerView} initialPage={0}>
+    <PagerView
+      keyboardDismissMode="on-drag"
+      style={styles.pagerView}
+      initialPage={0}>
       <View key="1">
         <First key="1" />
       </View>

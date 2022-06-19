@@ -1,19 +1,10 @@
 import {View, Text, FlatList} from 'react-native';
 import React from 'react';
 import {useQuery} from 'react-query';
-
-const fetchData = () => {
-  return fetch(
-    'https://getcha-api-v7-prod.getcha.io/v7/community?page_per_count=30&page=2&type=11,12,13,26,27,28,29,30,32',
-  )
-    .then(res => res.json())
-    .catch(err => {
-      throw new Error(err);
-    });
-};
+import {fetchData} from './fetch';
 
 const Second = () => {
-  const {data, isError, isLoading} = useQuery('second', fetchData);
+  const {data, isError, isLoading} = useQuery('second', () => fetchData(2));
 
   if (isError || isLoading) {
     return (
