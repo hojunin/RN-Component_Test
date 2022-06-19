@@ -5,6 +5,7 @@ import {
   Image,
   Dimensions,
   ImageBackground,
+  TextInput,
 } from 'react-native';
 import {TapGestureHandler} from 'react-native-gesture-handler';
 import Animated, {
