@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import Router from './src/Router';
+import {fileSystemTest} from './src/Utils/fs';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,6 +14,10 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
+  useEffect(() => {
+    fileSystemTest();
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={styles.container}>

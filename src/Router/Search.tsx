@@ -10,6 +10,7 @@ import TabHandler from '../Screens/TabHandler';
 import LayoutAnimation from '../Screens/LayoutAnimation';
 import TabViewScreen from '../Screens/TabView';
 import CustomPager from '../Screens/TabView/CustomPager';
+import WebViewScreen from '../Screens/Webview';
 
 const SearchStack = createStackNavigator();
 
@@ -58,7 +59,7 @@ const SearchNavigator = () => {
       />
       <SearchStack.Screen
         name="TabView"
-        component={CustomPager}
+        component={WebViewScreen}
         options={{headerTitle: '탭뷰'}}
       />
     </SearchStack.Navigator>
